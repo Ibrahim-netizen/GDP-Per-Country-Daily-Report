@@ -1,0 +1,72 @@
+-- create the table
+
+-- 1 drop table gdp_data cascade;
+
+create table gdp_data(
+DEMO_IND varchar(200),
+Indicator varchar(250),
+	Location varchar(100),
+	Country varchar(200),
+	Time varchar(200),
+	Value float,
+	Flag_codes varchar(200),
+	Flags varchar(200)
+);
+
+select * from gdp_data;
+
+-- 2 import the data
+
+copy gdp_data from 'C:\Downloads\gdp_raw_data.csv' delimiter ',' csv header; 
+
+-- if unable to do so, create permission named Everyone inside security settings of folder properties where data file is saved and grant permission to everyone.
+
+select * from gdp_data;
+
+-- 3 create a view to have the data we need to send to our dashboard
+
+create view gdp_excel_input as
+select a.*,b.GDP_Per_Capita from
+
+(select country, Time as NumberOfYears, value as GDP_Value from gdp_data 
+ where indicator = 'GDP (current US$)') a
+ 
+ left join
+ (select country, time as NumberOfYears, value as GDP_Per_Capita from gdp_data
+ where indicator = 'GDP per capita (current US$)') b
+ on a.country = b.country and a.NumberOfYears = b.NumberOfYears;
+
+select distinct indicator from gdp_data;
+
+-- 4 creating a stored procedure with step 1 and step 2 sql statements
+
+create or replace procedure GDP_Excel_Input_Monthly() 
+language 'plpgsql'
+as $Body$
+declare
+begin
+create table gdp_data(
+DEMO_IND varchar(200),
+Indicator varchar(250),
+	Location varchar(100),
+	Country varchar(200),
+	Time varchar(200),
+	Value float,
+	Flag_codes varchar(200),
+	Flags varchar(200)
+);
+
+-- import the data
+
+copy gdp_data from 'C:\Downloads\gdp_raw_data.csv' delimiter ',' csv header; 
+end;
+$Body$;
+
+call GDP_Excel_Input_Monthly();
+
+-- 6 setup scheduled job with pgagent so the procedure GDP_Excel_Input_Monthly() can run daily.
+
+-- 7 connect postgres database with Power Bi uisng import method.
+
+
+
