@@ -13,5 +13,6 @@ To achieve this, I automated the creation of daily dashboard report of countries
 
 ![image](https://github.com/Ibrahim-netizen/GDP-Per-Country-Daily-Report/assets/76513466/328ad10a-9836-4957-9e9a-815e1603369c)
 
-Aside the aforementioned deliverables, the daily automated dashboard can be used to advise policymakers, economists and business stakeholders to analyze the impact of economy variables such as population and gross domestic product for countries per year on designing monetary and fscal policy, economic shocks and tax and spending plans.
+
+Aside the aforementioned deliverables, the daily automated dashboard can be used to advise policymakers, economists and business stakeholders to analyze the impact of economy factors such as population and gross domestic product for countries per year on designing monetary and fiscal policy, economic shocks and tax and spending plans.
 
