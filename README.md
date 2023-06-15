@@ -1,6 +1,6 @@
 ## GDP-Per-Country-Daily-Report
 This project was aimed at scheduling a daily dashboard report of Gross Domesic Product Per Country at a specific time. 
-Another is to demonstrate enterprise-scale analytics data architecture which involves importing data into datbase system or data warehouse then query and transform the data before importing into a data visualization tool to display charts of desired metrics.
+Another is to demonstrate enterprise-scale analytics data architecture which involves importing data into database system or data warehouse then query and transform the data before importing into a data visualization tool to display charts of desired metrics.
 
 #### The Deliverables include 
 - GDP Per Country Database with PostgreSQL
