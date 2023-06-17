@@ -11,7 +11,7 @@ Another is to demonstrate enterprise-scale analytics data architecture which inv
 ##### Data
 The data was sourced from https://github.com/Pitsillides91/Power-BI-raw-data/blob/master/SQL%20to%20Power%20BI/gdp_raw_data.csv
 
-![image](https://github.com/Ibrahim-netizen/GDP-Per-Country-Daily-Report/assets/76513466/e9feb0d2-870a-4948-8346-558d0f96847b)
+![image](https://github.com/Ibrahim-netizen/GDP-Per-Country-Daily-Report/assets/76513466/32b67299-cf13-4329-82f3-9d5c486d9149)
 
 
 It comprises of the gross domestic product per capita value per country and the year for recorded value from 1970 to 2017 as well as the location code and flag code of each country.
