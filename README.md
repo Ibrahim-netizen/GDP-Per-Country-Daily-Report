@@ -3,10 +3,10 @@ This project was aimed at scheduling a daily dashboard report of Gross Domesic P
 Another is to demonstrate enterprise-scale analytics data architecture which involves importing data into database system or data warehouse then query and transform the data before importing into a data visualization tool to display charts of desired metrics.
 
 #### The Deliverables include 
-- GDP Per Country Database with PostgreSQL
-- An SQL function and stored procedure in PostgreSQL
+- GDP Per Country Database
+- An SQL function, View and stored procedure in PostgreSQL
 - Scheduled job with PostgreSQL PgAgent
-- GDP Per Country daily Dashboard report with Power Bi
+- GDP Per Country daily Dashboard report in Power Bi
 
 ##### Data
 The data was sourced from https://github.com/Pitsillides91/Power-BI-raw-data/blob/master/SQL%20to%20Power%20BI/gdp_raw_data.csv It comprises of the gross domestic product per capita value per country and the year for recorded value from 1970 to 2017 as well as the location code and flag code of each country.
